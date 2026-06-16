@@ -3,7 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AEVOLAN | Architecture</title>
+    <title>AEVOLAN | Sai Sharat Khambampati — Senior Data Engineer & Cloud Architect</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="AEVOLAN is the personal technology portfolio of Sai Sharat Khambampati — Senior Data Engineer and Cloud Architect with 15+ years of experience. Creator of Soamed AI, HiFi Finances, PassForge, and ZeroToAI."/>
+    <meta name="keywords" content="Sai Sharat Khambampati, AEVOLAN, Senior Data Engineer, Cloud Architect, Microsoft Fabric, Azure, Snowflake, Data Vault 2.0, Soamed AI, HiFi Finances, PassForge, ZeroToAI, FinTech, EdTech, AI platform"/>
+    <meta name="author" content="Sai Sharat Khambampati"/>
+    <meta name="robots" content="index, follow"/>
+    <link rel="canonical" href="https://www.aevolantech.com/"/>
+
+    <!-- Open Graph (LinkedIn, WhatsApp, Facebook previews) -->
+    <meta property="og:title" content="AEVOLAN | Sai Sharat Khambampati — Senior Data Engineer & Cloud Architect"/>
+    <meta property="og:description" content="Personal technology portfolio showcasing Soamed AI, HiFi Finances, PassForge, and ZeroToAI. 15+ years of enterprise data engineering and cloud architecture."/>
+    <meta property="og:url" content="https://www.aevolantech.com/"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:site_name" content="AEVOLAN Technologies"/>
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:title" content="AEVOLAN | Sai Sharat Khambampati"/>
+    <meta name="twitter:description" content="Senior Data Engineer and Cloud Architect. Creator of Soamed AI, HiFi Finances, PassForge, ZeroToAI."/>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;900&display=swap');
         :root { --bg: #050505; --accent: #00f2ff; --accent2: #7b61ff; --glass: rgba(255,255,255,0.04); }
@@ -91,30 +110,179 @@
             .section-title { font-size: 2rem; }
             .proj-actions { flex-direction: column; }
         }
+    
+        /* Scroll dot animation */
+        .scroll-dot-wrap { text-align:center; padding:8px 0 0; }
+        .scroll-dot {
+            display:inline-block; width:4px; height:22px;
+            background:linear-gradient(to bottom,var(--accent),transparent);
+            border-radius:2px;
+            animation:scrollAnim 1.6s ease-in-out infinite;
+        }
+        @keyframes scrollAnim {
+            0%{opacity:1;transform:translateY(0);}
+            100%{opacity:0;transform:translateY(10px);}
+        }
+        /* KODE section below hero */
+        .kode-section { padding:0 10% 50px; max-width:1100px; margin:0 auto; }
+        .kode-label {
+            font-family:'IBM Plex Mono',monospace;
+            font-size:0.65rem; letter-spacing:3px;
+            color:#222; text-align:center; margin-bottom:24px;
+        }
+        .kode-grid {
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+            gap:20px;
+        }
+        .kode-card {
+            background:var(--glass);
+            border:1px solid #222;
+            border-radius:20px;
+            padding:28px 22px;
+            transition:0.4s;
+            position:relative;
+            overflow:hidden;
+        }
+        .kode-card:hover {
+            border-color:var(--accent);
+            transform:translateY(-5px);
+            box-shadow:0 0 20px rgba(0,242,255,0.1);
+        }
+        .kode-card-bg {
+            position:absolute; top:-10px; right:8px;
+            font-size:5rem; font-weight:900;
+            color:rgba(0,242,255,0.04);
+            font-family:'Inter',sans-serif;
+            line-height:1; pointer-events:none;
+        }
+        .kode-card h3 { font-size:0.85rem; color:var(--accent); margin-bottom:8px; position:relative; }
+        .kode-card p { font-size:0.82rem; color:#666; line-height:1.65; position:relative; }
+        /* Hero centered */
+        .hero-centered {
+            text-align:center;
+            display:flex;
+            flex-direction:column;
+            align-items:center;
+            padding-bottom:16px;
+        }
+        .hero-logo-wrap { margin-bottom:20px; }
+        .hero-cta-row { display:flex; gap:12px; margin-top:24px; flex-wrap:wrap; justify-content:center; }
+        .btn-cta-primary {
+            padding:11px 26px; background:var(--accent);
+            color:#000; border-radius:50px;
+            font-size:0.8rem; font-weight:700;
+            border:none; cursor:pointer;
+            font-family:'Inter',sans-serif;
+            transition:0.2s; letter-spacing:0.3px;
+        }
+        .btn-cta-primary:hover { background:#00d4e0; transform:translateY(-2px); }
+        .btn-cta-ghost {
+            padding:11px 26px; border:1px solid #333;
+            color:#666; border-radius:50px;
+            font-size:0.8rem; background:none;
+            cursor:pointer; font-family:'Inter',sans-serif;
+            transition:0.2s;
+        }
+        .btn-cta-ghost:hover { border-color:var(--accent); color:var(--accent); }
+
     </style>
 </head>
 <body>
 
-<nav>
+<nav style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;">
+    <!-- Logo in nav -->
+    <div style="display:flex;align-items:center;gap:9px;cursor:pointer;" onclick="showTab('home', document.querySelectorAll('.tab-btn')[0])">
+        <svg width="28" height="28" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="4" y="4" width="112" height="112" rx="22" fill="rgba(0,242,255,0.06)" stroke="#00f2ff" stroke-width="3"/>
+            <path d="M60 72 C60 72 42 46 30 54 C18 62 26 78 36 78 C46 78 54 66 60 60 C66 54 74 42 84 42 C94 42 102 58 90 66 C78 74 60 48 60 48"
+                  stroke="#00f2ff" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            <line x1="60" y1="24" x2="60" y2="52" stroke="#00f2ff" stroke-width="5" stroke-linecap="round"/>
+            <circle cx="60" cy="22" r="6" fill="#00f2ff"/>
+            <text x="16" y="32" font-family="Inter" font-weight="900" font-size="11" fill="#00f2ff" opacity="0.5">K</text>
+            <text x="92" y="32" font-family="Inter" font-weight="900" font-size="11" fill="#fff" opacity="0.3">O</text>
+            <text x="16" y="106" font-family="Inter" font-weight="900" font-size="11" fill="#fff" opacity="0.3">D</text>
+            <text x="92" y="106" font-family="Inter" font-weight="900" font-size="11" fill="#00f2ff" opacity="0.5">E</text>
+        </svg>
+        <div style="line-height:1.2;">
+            <div style="font-size:13px;font-weight:700;color:#fff;letter-spacing:1px;">AEVOLAN</div>
+            <div style="font-family:'IBM Plex Mono',monospace;font-size:8px;color:#00f2ff;letter-spacing:2px;opacity:0.6;">TECHNOLOGIES</div>
+        </div>
+    </div>
+    <!-- Nav tabs -->
+    <div style="display:flex;flex-wrap:wrap;gap:8px;">
     <button class="tab-btn active" onclick="showTab('home', this)">HOME</button>
     <button class="tab-btn" onclick="showTab('about', this)">ABOUT ME</button>
     <button class="tab-btn" onclick="showTab('projects', this)">PROJECTS</button>
     <button class="tab-btn" onclick="showTab('feedback', this)">CONTACT</button>
+    </div>
 </nav>
 
 <!-- HOME -->
 <section id="home" class="content-section active">
-    <div class="hero-wrap">
+    <div class="hero-wrap hero-centered">
+
         <div class="section-eyebrow">AEVOLAN TECHNOLOGIES</div>
+
+        <!-- LOGO MARK -->
+        <div class="hero-logo-wrap">
+            <svg width="110" height="110" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="4" y="4" width="112" height="112" rx="22" fill="rgba(0,242,255,0.04)" stroke="#00f2ff" stroke-width="2"/>
+                <rect x="10" y="10" width="100" height="100" rx="18" fill="none" stroke="#00f2ff" stroke-width="0.5" opacity="0.15"/>
+                <path d="M60 72 C60 72 42 46 30 54 C18 62 26 78 36 78 C46 78 54 66 60 60 C66 54 74 42 84 42 C94 42 102 58 90 66 C78 74 60 48 60 48"
+                      stroke="#00f2ff" stroke-width="3.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                <line x1="60" y1="24" x2="60" y2="52" stroke="#00f2ff" stroke-width="3.5" stroke-linecap="round"/>
+                <circle cx="60" cy="22" r="4.5" fill="#00f2ff"/>
+                <line x1="36" y1="78" x2="24" y2="96" stroke="#00f2ff" stroke-width="2.5" stroke-linecap="round" opacity="0.6"/>
+                <line x1="84" y1="42" x2="96" y2="96" stroke="#00f2ff" stroke-width="2.5" stroke-linecap="round" opacity="0.6"/>
+                <text x="16" y="32" font-family="Inter, sans-serif" font-weight="900" font-size="11" fill="#00f2ff" opacity="0.5">K</text>
+                <text x="92" y="32" font-family="Inter, sans-serif" font-weight="900" font-size="11" fill="#ffffff" opacity="0.35">O</text>
+                <text x="16" y="106" font-family="Inter, sans-serif" font-weight="900" font-size="11" fill="#ffffff" opacity="0.35">D</text>
+                <text x="92" y="106" font-family="Inter, sans-serif" font-weight="900" font-size="11" fill="#00f2ff" opacity="0.5">E</text>
+            </svg>
+        </div>
+
         <h1 class="hero-title">AEV<span>O</span>LAN</h1>
-        <p class="hero-tagline">Engineering the long distance. &nbsp;&nbsp; Core Methodology: <strong>KODE</strong></p>
-        <div class="grid">
-            <div class="card"><h3>K &mdash; Knowledge</h3><p>Deep domain research across data engineering, cloud architecture, AI systems, and financial intelligence. Every build starts with understanding the problem space completely.</p></div>
-            <div class="card"><h3>O &mdash; Optimization</h3><p>High-performance logic with minimal overhead. From token-efficient LLM pipelines to sub-second financial modelling engines where speed and precision are non-negotiable.</p></div>
-            <div class="card"><h3>D &mdash; Data</h3><p>Scalable, auditable data architecture. Medallion frameworks, Data Vault 2.0 models, and cloud-native pipelines built to handle enterprise-grade complexity.</p></div>
-            <div class="card"><h3>E &mdash; Engineering</h3><p>Robust execution from design to deployment. CI/CD pipelines, multi-environment provisioning, and production-grade delivery — engineered to last.</p></div>
+        <p class="hero-tagline">Engineering the long distance</p>
+
+        <div class="hero-cta-row">
+            <button class="btn-cta-primary" onclick="showTab('projects', document.querySelectorAll('.tab-btn')[2])">View Projects &rarr;</button>
+            <button class="btn-cta-ghost" onclick="showTab('feedback', document.querySelectorAll('.tab-btn')[3])">Contact Me</button>
         </div>
     </div>
+
+    <!-- Scroll hint -->
+    <div class="scroll-dot-wrap">
+        <div class="scroll-dot"></div>
+    </div>
+
+    <!-- KODE METHODOLOGY -->
+    <div class="kode-section">
+        <div class="kode-label">// CORE METHODOLOGY</div>
+        <div class="kode-grid">
+            <div class="kode-card">
+                <div class="kode-card-bg">K</div>
+                <h3>K &mdash; Knowledge</h3>
+                <p>Deep domain research across data engineering, cloud architecture, AI systems, and financial intelligence. Every build starts with understanding the problem space completely.</p>
+            </div>
+            <div class="kode-card">
+                <div class="kode-card-bg">O</div>
+                <h3>O &mdash; Optimization</h3>
+                <p>High-performance logic with minimal overhead. From token-efficient LLM pipelines to sub-second financial modelling engines where speed and precision are non-negotiable.</p>
+            </div>
+            <div class="kode-card">
+                <div class="kode-card-bg">D</div>
+                <h3>D &mdash; Data</h3>
+                <p>Scalable, auditable data architecture. Medallion frameworks, Data Vault 2.0 models, and cloud-native pipelines built to handle enterprise-grade complexity.</p>
+            </div>
+            <div class="kode-card">
+                <div class="kode-card-bg">E</div>
+                <h3>E &mdash; Engineering</h3>
+                <p>Robust execution from design to deployment. CI/CD pipelines, multi-environment provisioning, and production-grade delivery, engineered to last.</p>
+            </div>
+        </div>
+    </div>
+
 </section>
 
 <!-- ABOUT -->
@@ -315,7 +483,26 @@
         } else {
             btn.classList.add('active');
         }
+        // Update URL hash without page reload
+        try { history.pushState(null, null, '#' + id); } catch(e) {}
     }
+
+    // On page load, check hash and activate correct tab
+    window.addEventListener('load', function() {
+        var hash = window.location.hash.replace('#', '');
+        var validTabs = ['home', 'about', 'projects', 'feedback'];
+        if (hash && validTabs.includes(hash)) {
+            var btn = document.querySelector('[onclick*="' + hash + '"]');
+            showTab(hash, btn || hash);
+        }
+    });
+
+    // Handle browser back/forward buttons
+    window.addEventListener('popstate', function() {
+        var hash = window.location.hash.replace('#', '') || 'home';
+        var btn = document.querySelector('[onclick*="' + hash + '"]');
+        showTab(hash, btn || hash);
+    });
 
     function requestDemo(project) {
         showTab('feedback', 'feedback');
