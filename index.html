@@ -132,8 +132,11 @@
         }
         .kode-grid {
             display:grid;
-            grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+            grid-template-columns:repeat(2,1fr);
             gap:20px;
+        }
+        @media(max-width:600px){
+            .kode-grid { grid-template-columns:1fr; }
         }
         .kode-card {
             background:var(--glass);
@@ -258,7 +261,7 @@
 
     <!-- KODE METHODOLOGY -->
     <div class="kode-section">
-        <div class="kode-label">// CORE METHODOLOGY</div>
+        <div class="kode-label">// CORE METHODOLOGY &nbsp;&nbsp; <span style="color:var(--accent);font-weight:900;font-size:0.85rem;letter-spacing:4px;">K.O.D.E.</span></div>
         <div class="kode-grid">
             <div class="kode-card">
                 <div class="kode-card-bg">K</div>
