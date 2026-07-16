@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AEVOLAN | Sai Sharat Khambampati — Senior Data Engineer & Cloud Architect</title>
+    <title>AEVOLAN | Sai Sharat Khambampati | Senior Data Engineer & Cloud Architect</title>
 
     <!-- SEO Meta Tags -->
     <meta name="description" content="AEVOLAN by Sai Sharat Khambampati. Senior Data Engineer, Cloud Architect, 15+ years. Creator of Soamed AI, HiFi Finances, PassForge and ZeroToAI. KODE methodology."/>
@@ -16,7 +16,7 @@
     <link rel="canonical" href="https://www.aevolantech.com/"/>
 
     <!-- Open Graph (LinkedIn, WhatsApp, Facebook previews) -->
-    <meta property="og:title" content="AEVOLAN | Sai Sharat Khambampati — Senior Data Engineer & Cloud Architect"/>
+    <meta property="og:title" content="AEVOLAN | Sai Sharat Khambampati | Senior Data Engineer & Cloud Architect"/>
     <meta property="og:description" content="AEVOLAN by Sai Sharat Khambampati. Personal home for Soamed AI, HiFi Finances, PassForge and ZeroToAI. 15+ years of enterprise data engineering and cloud architecture."/>
     <meta property="og:url" content="https://www.aevolantech.com/"/>
     <meta property="og:type" content="website"/>
@@ -192,7 +192,524 @@
         }
         .btn-cta-ghost:hover { border-color:var(--accent); color:var(--accent); }
 
-    </style>
+    
+        /* ── SOAMED AI LEARN MORE ── */
+        .learn-drop{
+            overflow:hidden;max-height:0;
+            transition:max-height .4s ease;
+            margin:20px -30px -30px;
+        }
+        .learn-drop.open{max-height:2000px;}
+        .learn-inner{
+            border-top:1px solid #111;
+            background:#060606;
+            padding:20px 24px 0;
+        }
+        .demo-header{
+            display:flex;align-items:center;
+            justify-content:space-between;
+            margin-bottom:16px;flex-wrap:wrap;gap:10px;
+        }
+        .demo-live{
+            display:flex;align-items:center;gap:7px;
+            font-family:'IBM Plex Mono',monospace;font-size:10px;
+            color:#A8FF78;letter-spacing:2px;
+        }
+        .demo-dot{
+            width:6px;height:6px;border-radius:50%;background:#A8FF78;
+            animation:livepulse 2s infinite;
+        }
+        @keyframes livepulse{
+            0%,100%{box-shadow:0 0 0 0 rgba(168,255,120,.5);}
+            50%{box-shadow:0 0 0 5px rgba(168,255,120,0);}
+        }
+        .s-tabs{display:flex;gap:6px;flex-wrap:wrap;}
+        .s-tab{
+            font-family:'IBM Plex Mono',monospace;font-size:10px;
+            padding:4px 12px;border-radius:20px;cursor:pointer;
+            border:1px solid #222;color:#444;background:none;transition:.15s;
+        }
+        .s-tab.active{border-color:#A8FF78;color:#A8FF78;background:rgba(168,255,120,.06);}
+        .screen-wrap .screen-block{margin-bottom:0!important;}
+        .screen-wrap .page-header{display:none!important;}
+        .slash-section{
+            padding:20px 0 24px;
+            border-top:1px solid #111;
+            margin-top:20px;
+        }
+        .slash-label{
+            font-family:'IBM Plex Mono',monospace;font-size:10px;
+            color:#444;letter-spacing:3px;margin-bottom:14px;
+        }
+        .slash-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+        @media(max-width:600px){.slash-grid{grid-template-columns:1fr;}}
+        .slash-item{
+            background:#0a0a0a;border:1px solid #1a1a1a;
+            border-radius:8px;padding:14px 16px;transition:border-color .2s;
+        }
+        .slash-item:hover{border-color:#A8FF78;}
+        .slash-cmd{
+            font-family:'JetBrains Mono','IBM Plex Mono',monospace;
+            font-size:13px;font-weight:600;color:#A8FF78;margin-bottom:5px;
+        }
+        .slash-desc{font-size:12px;color:#555;margin-bottom:8px;line-height:1.5;}
+        .slash-out{
+            display:inline-flex;align-items:center;gap:4px;
+            font-family:'IBM Plex Mono',monospace;font-size:10px;
+            padding:2px 8px;border-radius:3px;
+            background:rgba(255,255,255,0.03);
+            border:1px solid #1a1a1a;color:#444;
+        }
+        .slash-out span{color:#00f2ff;}
+        .btn-learn{
+            display:inline-flex;align-items:center;gap:6px;
+            padding:9px 18px;border:1px solid #333;
+            color:#888;border-radius:50px;font-size:12px;
+            background:none;cursor:pointer;
+            font-family:'Outfit',sans-serif;transition:.2s;
+        }
+        .btn-learn:hover{border-color:#A8FF78;color:#A8FF78;}
+        .btn-learn .lm-plus{
+            font-size:16px;font-weight:300;line-height:1;
+            transition:transform .3s;display:inline-block;
+        }
+        .btn-learn.open{border-color:#A8FF78;color:#A8FF78;}
+        .btn-learn.open .lm-plus{transform:rotate(45deg);}
+
+        /* Soamed AI mock interface styles */
+        
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: 'Inter', sans-serif;
+  background: #060E16;
+  color: #E0EAF4;
+  padding: 40px 24px 80px;
+}
+
+/* ── PAGE HEADER ── */
+.page-header {
+  text-align: center;
+  margin-bottom: 56px;
+}
+.page-header h1 {
+  font-size: 2rem; font-weight: 800;
+  letter-spacing: -0.02em; margin-bottom: 8px;
+}
+.page-header h1 span { color: #A8FF78; }
+.page-header p { color: #607080; font-size: 0.9rem; }
+
+/* ── SCREEN LABEL ── */
+.screen-block { margin-bottom: 64px; }
+.screen-label {
+  display: flex; align-items: center; gap: 12px;
+  margin-bottom: 16px;
+}
+.screen-num {
+  width: 28px; height: 28px; border-radius: 50%;
+  background: rgba(168,255,120,0.12);
+  border: 1px solid rgba(168,255,120,0.3);
+  color: #A8FF78; font-size: 0.72rem; font-weight: 700;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.screen-title { font-size: 1rem; font-weight: 700; }
+.screen-sub { font-size: 0.78rem; color: #607080; margin-top: 2px; }
+
+/* ── CHROME WRAPPER ── */
+.chrome {
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 24px 80px rgba(0,0,0,0.6), 0 0 0 1px rgba(255,255,255,0.04);
+  background: #0D1B2A;
+  max-width: 1100px;
+}
+.chrome-bar {
+  background: #080F18;
+  padding: 10px 16px;
+  display: flex; align-items: center; gap: 8px;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+.chrome-dot { width: 11px; height: 11px; border-radius: 50%; }
+.chrome-url {
+  flex: 1; background: rgba(255,255,255,0.05);
+  border-radius: 5px; padding: 4px 12px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.68rem; color: #607080;
+  margin: 0 12px;
+}
+
+/* ── APP SHELL ── */
+.app-shell {
+  display: flex;
+  height: 560px;
+}
+
+/* Sidebar 1 ,  Projects */
+.sidebar-projects {
+  width: 200px; flex-shrink: 0;
+  background: #080F18;
+  border-right: 1px solid rgba(255,255,255,0.06);
+  display: flex; flex-direction: column;
+}
+.sidebar-logo {
+  padding: 16px 14px 12px;
+  font-size: 0.85rem; font-weight: 800;
+  letter-spacing: -0.01em;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  color: #A8FF78;
+}
+.sidebar-logo span { color: #E0EAF4; }
+.sidebar-section {
+  padding: 10px 10px 6px;
+  font-size: 0.6rem; font-weight: 700;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  color: #3A5068;
+}
+.proj-item {
+  display: flex; align-items: center; gap: 8px;
+  padding: 7px 10px; margin: 1px 6px;
+  border-radius: 6px; cursor: pointer;
+  font-size: 0.78rem; font-weight: 500;
+  transition: background 0.15s;
+}
+.proj-item.active { background: rgba(168,255,120,0.08); color: #A8FF78; }
+.proj-item:not(.active) { color: #607080; }
+.proj-dot { width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0; }
+.new-btn {
+  margin: 8px 10px;
+  padding: 7px 10px;
+  background: rgba(168,255,120,0.06);
+  border: 1px dashed rgba(168,255,120,0.2);
+  border-radius: 6px; font-size: 0.75rem;
+  color: #4A6858; cursor: pointer; text-align: center;
+}
+
+/* Sidebar 2 ,  Chats */
+.sidebar-chats {
+  width: 210px; flex-shrink: 0;
+  background: #0A1520;
+  border-right: 1px solid rgba(255,255,255,0.06);
+  display: flex; flex-direction: column;
+}
+.chat-header {
+  padding: 12px 12px 8px;
+  display: flex; align-items: center; gap: 6px;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+.chat-header-dot { width: 7px; height: 7px; border-radius: 50%; background: #E8FF47; }
+.chat-header-name { font-size: 0.78rem; font-weight: 700; }
+.chat-item {
+  display: flex; align-items: flex-start; gap: 7px;
+  padding: 8px 10px; margin: 2px 6px;
+  border-radius: 6px; cursor: pointer;
+  font-size: 0.74rem;
+}
+.chat-item.active { background: rgba(255,255,255,0.05); }
+.chat-item-icon { color: #3A5068; margin-top: 1px; font-size: 0.7rem; }
+.chat-item-title { font-weight: 500; color: #C0D4E0; font-size: 0.74rem; line-height: 1.3; }
+.chat-item-meta { color: #3A5068; font-size: 0.65rem; margin-top: 2px; }
+.new-chat-btn {
+  margin: 8px 10px;
+  padding: 7px;
+  background: rgba(168,255,120,0.08);
+  border: 1px solid rgba(168,255,120,0.2);
+  border-radius: 6px; font-size: 0.74rem;
+  color: #A8FF78; cursor: pointer; text-align: center; font-weight: 600;
+}
+
+/* Main chat area */
+.chat-main {
+  flex: 1; display: flex; flex-direction: column;
+  background: #0D1B2A; overflow: hidden;
+}
+.topbar {
+  padding: 10px 16px;
+  display: flex; align-items: center; gap: 8px;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  background: #0A1520;
+}
+.topbar-dot { width: 7px; height: 7px; border-radius: 50%; background: #E8FF47; }
+.topbar-proj { font-size: 0.78rem; font-weight: 600; }
+.topbar-sep { color: #3A5068; font-size: 0.75rem; }
+.topbar-chat { font-size: 0.78rem; color: #607080; }
+.topbar-actions { margin-left: auto; display: flex; gap: 8px; }
+.topbar-btn {
+  padding: 4px 10px; border-radius: 5px;
+  font-size: 0.68rem; font-weight: 600;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  color: #607080; cursor: pointer;
+}
+
+/* Messages */
+.messages {
+  flex: 1; overflow-y: auto; padding: 20px 20px 12px;
+  display: flex; flex-direction: column; gap: 16px;
+}
+.msg-row { display: flex; gap: 10px; align-items: flex-start; }
+.msg-row.ai .avatar {
+  width: 28px; height: 28px; border-radius: 7px; flex-shrink: 0;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.7rem; font-weight: 700;
+  background: linear-gradient(135deg, #A8FF78, #A8FF7899);
+  color: #0a1f0a;
+}
+.msg-row.user .avatar {
+  width: 28px; height: 28px; border-radius: 7px; flex-shrink: 0;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.62rem; font-weight: 700;
+  background: rgba(255,255,255,0.07); color: #9DB8C8;
+}
+.bubble {
+  max-width: 560px; padding: 10px 13px;
+  border-radius: 10px; font-size: 0.82rem; line-height: 1.6;
+}
+.bubble.ai { background: rgba(255,255,255,0.04); color: #C8DCE8; }
+.bubble.user { background: rgba(168,255,120,0.07); color: #D0E8D0; border: 1px solid rgba(168,255,120,0.12); }
+.msg-meta { font-size: 0.62rem; color: #3A5068; margin-top: 4px; padding-left: 2px; }
+.bubble code {
+  font-family: 'JetBrains Mono', monospace;
+  background: rgba(168,255,120,0.1); color: #A8FF78;
+  padding: 1px 5px; border-radius: 3px; font-size: 0.78rem;
+}
+.bubble strong { color: #E0EAF4; }
+
+/* Download bar */
+.download-bar {
+  display: flex; align-items: center; gap: 10px;
+  margin-top: 8px; padding: 8px 12px;
+  background: rgba(0,139,139,0.08);
+  border: 1px solid rgba(0,139,139,0.2);
+  border-radius: 8px;
+}
+.download-btn {
+  padding: 5px 12px; border-radius: 5px;
+  font-size: 0.75rem; font-weight: 700;
+  background: rgba(168,255,120,0.12);
+  border: 1px solid rgba(168,255,120,0.3);
+  color: #A8FF78; cursor: pointer;
+}
+.download-tip { font-size: 0.7rem; color: #607080; }
+
+/* Token badge */
+.token-badge {
+  display: flex; align-items: center; gap: 8px; flex-wrap: wrap;
+  padding: 5px 10px; margin: 4px 0 4px 38px;
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(255,255,255,0.05);
+  border-radius: 5px; font-size: 0.68rem; color: #3A5068;
+}
+.tok-saved { color: #4A8A5A; }
+.tok-mode {
+  background: rgba(168,255,120,0.08); color: #A8FF78;
+  border: 1px solid rgba(168,255,120,0.2);
+  padding: 1px 6px; border-radius: 3px; font-size: 0.65rem; font-weight: 600;
+}
+
+/* Typing indicator */
+.typing-row { display: flex; gap: 10px; align-items: center; }
+.typing-bubble {
+  display: flex; gap: 4px; align-items: center;
+  padding: 10px 14px; background: rgba(255,255,255,0.04); border-radius: 10px;
+}
+.typing-dot {
+  width: 6px; height: 6px; border-radius: 50%; background: #3A5068;
+  animation: bounce 1.2s infinite;
+}
+.typing-dot:nth-child(2) { animation-delay: 0.2s; }
+.typing-dot:nth-child(3) { animation-delay: 0.4s; }
+@keyframes bounce { 0%,60%,100%{transform:translateY(0)} 30%{transform:translateY(-5px)} }
+
+/* Input area */
+.input-area {
+  padding: 10px 16px 12px;
+  border-top: 1px solid rgba(255,255,255,0.06);
+  background: #0A1520;
+}
+.file-chip {
+  display: inline-flex; align-items: center; gap: 5px;
+  padding: 3px 8px; margin-bottom: 7px;
+  background: rgba(168,255,120,0.06);
+  border: 1px solid rgba(168,255,120,0.2);
+  border-radius: 5px; font-size: 0.68rem;
+  font-family: 'JetBrains Mono', monospace; color: #A8FF78;
+}
+.input-box {
+  display: flex; gap: 8px; align-items: flex-end;
+}
+.input-field {
+  flex: 1; background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 8px; padding: 9px 12px;
+  font-size: 0.82rem; color: #C8DCE8;
+  font-family: 'Inter', sans-serif; resize: none;
+  line-height: 1.5; min-height: 38px;
+}
+.send-btn {
+  width: 36px; height: 36px; border-radius: 8px;
+  background: linear-gradient(135deg, #A8FF78, #78D8A8);
+  border: none; cursor: pointer; flex-shrink: 0;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.85rem;
+}
+.input-footer {
+  display: flex; align-items: center; justify-content: space-between;
+  margin-top: 6px; padding: 0 2px;
+}
+.input-hint { font-size: 0.62rem; color: #3A5068; }
+.input-right { display: flex; align-items: center; gap: 8px; }
+.ctx-badge { font-family: 'JetBrains Mono', monospace; font-size: 0.6rem; color: #3A5068; }
+.compress-mini {
+  display: flex; gap: 3px;
+}
+.cm-btn {
+  padding: 1px 5px; border-radius: 3px; font-size: 0.58rem; font-weight: 600;
+  border: 1px solid rgba(255,255,255,0.08); background: rgba(255,255,255,0.03);
+  color: #3A5068; cursor: pointer;
+}
+.cm-btn.active {
+  background: rgba(168,255,120,0.1); color: #A8FF78;
+  border-color: rgba(168,255,120,0.3);
+}
+
+/* ── MODEL DROPDOWN ── */
+.model-selector-btn {
+  display: flex; align-items: center; gap: 5px;
+  padding: 3px 8px; border-radius: 5px;
+  background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08);
+  font-size: 0.7rem; color: #9DB8C8; cursor: pointer; font-family: 'Inter', sans-serif;
+}
+.model-dot-sm { width: 6px; height: 6px; border-radius: 50%; }
+
+/* ── PROVIDER DROPDOWN OVERLAY ── */
+.dropdown-overlay {
+  position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(6,14,22,0.7);
+  display: flex; align-items: center; justify-content: center;
+  border-radius: 11px;
+  z-index: 10;
+}
+.model-dropdown {
+  background: #0A1520; border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 10px; padding: 8px;
+  width: 280px;
+  box-shadow: 0 24px 60px rgba(0,0,0,0.8);
+}
+.model-group-label {
+  font-size: 0.6rem; font-weight: 700; letter-spacing: 0.1em;
+  text-transform: uppercase; color: #3A5068;
+  padding: 6px 8px 4px;
+}
+.model-option {
+  display: flex; align-items: center; gap: 9px;
+  padding: 7px 8px; border-radius: 6px; cursor: pointer;
+  transition: background 0.1s;
+}
+.model-option:hover, .model-option.active { background: rgba(255,255,255,0.05); }
+.model-option-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+.model-option-name { font-size: 0.78rem; font-weight: 600; color: #C8DCE8; }
+.model-option-desc { font-size: 0.65rem; color: #3A5068; }
+.model-option.active .model-option-name { color: #A8FF78; }
+
+/* ── PROGRESS INDICATOR ── */
+.progress-bar-wrap {
+  background: rgba(0,139,139,0.06);
+  border: 1px solid rgba(0,139,139,0.15);
+  border-radius: 8px; padding: 12px 14px; margin-top: 4px;
+}
+.progress-label { font-size: 0.75rem; color: #9DB8C8; margin-bottom: 8px; font-weight: 600; }
+.progress-track {
+  background: rgba(255,255,255,0.04); border-radius: 4px;
+  height: 6px; overflow: hidden; margin-bottom: 6px;
+}
+.progress-fill {
+  height: 100%; border-radius: 4px;
+  background: linear-gradient(90deg, #008B8B, #A8FF78);
+}
+.progress-steps { display: flex; gap: 6px; flex-wrap: wrap; }
+.progress-step {
+  font-size: 0.62rem; padding: 2px 7px; border-radius: 10px;
+  font-family: 'JetBrains Mono', monospace;
+}
+.progress-step.done { background: rgba(168,255,120,0.1); color: #A8FF78; }
+.progress-step.active { background: rgba(0,139,139,0.15); color: #00BCD4; }
+.progress-step.pending { background: rgba(255,255,255,0.03); color: #3A5068; }
+
+/* ── EMPTY STATE ── */
+.empty-state {
+  flex: 1; display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  padding: 40px 20px; gap: 16px;
+}
+.empty-logo { font-size: 2rem; font-weight: 900; color: #A8FF78; letter-spacing: -0.03em; }
+.empty-prompt {
+  font-size: 0.78rem; color: #3A5068; text-align: center;
+  max-width: 320px; line-height: 1.7;
+}
+.cmd-chips { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center; margin-top: 4px; }
+.cmd-chip {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.72rem; padding: 4px 10px;
+  background: rgba(232,255,71,0.06); border: 1px solid rgba(232,255,71,0.15);
+  border-radius: 5px; color: #E8FF47;
+}
+
+/* ── DASHBOARD ── */
+.dashboard-overlay {
+  position: absolute; inset: 0;
+  background: rgba(6,14,22,0.85);
+  display: flex; align-items: center; justify-content: center;
+  border-radius: 11px; z-index: 10;
+}
+.dashboard-modal {
+  background: #0A1520; border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 12px; padding: 24px;
+  width: 520px; max-height: 480px; overflow-y: auto;
+  box-shadow: 0 32px 80px rgba(0,0,0,0.9);
+}
+.dash-title { font-size: 1rem; font-weight: 800; margin-bottom: 4px; }
+.dash-sub { font-size: 0.72rem; color: #3A5068; margin-bottom: 20px; }
+.kpi-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; margin-bottom: 20px; }
+.kpi-card {
+  background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 8px; padding: 12px;
+}
+.kpi-label { font-size: 0.6rem; color: #3A5068; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 4px; }
+.kpi-value { font-size: 1.4rem; font-weight: 800; font-family: 'JetBrains Mono', monospace; }
+.kpi-value.green { color: #A8FF78; }
+.kpi-value.blue { color: #4DAAFF; }
+.kpi-value.gold { color: #E8FF47; }
+.dash-section { font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: #3A5068; margin-bottom: 10px; }
+.proj-bar-row { margin-bottom: 8px; }
+.proj-bar-header { display: flex; justify-content: space-between; font-size: 0.72rem; margin-bottom: 4px; }
+.proj-bar-track { background: rgba(255,255,255,0.04); border-radius: 3px; height: 8px; }
+.proj-bar-fill { height: 100%; border-radius: 3px; }
+.savings-bars { margin-top: 16px; }
+.sbar-row { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+.sbar-label { font-size: 0.7rem; color: #607080; width: 80px; flex-shrink: 0; }
+.sbar-track { flex: 1; background: rgba(255,255,255,0.04); border-radius: 3px; height: 20px; overflow: hidden; }
+.sbar-fill { height: 100%; border-radius: 3px; display: flex; align-items: center; padding-left: 8px; font-size: 0.65rem; font-weight: 700; color: #0a1f0a; }
+.sbar-val { font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; width: 52px; text-align: right; }
+.compress-toggle-row { display: flex; gap: 6px; margin-top: 12px; }
+.ct-btn {
+  padding: 4px 12px; border-radius: 5px; font-size: 0.72rem; font-weight: 600;
+  border: 1px solid rgba(255,255,255,0.08); background: rgba(255,255,255,0.03); color: #3A5068; cursor: pointer;
+}
+.ct-btn.active { background: rgba(168,255,120,0.1); color: #A8FF78; border-color: rgba(168,255,120,0.3); }
+
+/* RELATIVE WRAPPER FOR OVERLAYS */
+.relative { position: relative; }
+
+/* ── SECTION DIVIDERS ── */
+.section-divider {
+  text-align: center; margin: 16px 0 48px;
+  font-size: 0.7rem; color: #3A5068;
+}
+
+        </style>
 </head>
 <body>
 
@@ -212,7 +729,6 @@
         </svg>
         <div style="line-height:1.2;">
             <div style="font-size:13px;font-weight:700;color:#fff;letter-spacing:1px;">AEVOLAN</div>
-            <div style="font-family:'IBM Plex Mono',monospace;font-size:8px;color:#00f2ff;letter-spacing:2px;opacity:0.6;">AEVOLAN</div>
         </div>
     </div>
     <!-- Nav tabs -->
@@ -268,22 +784,22 @@
         <div class="kode-grid">
             <div class="kode-card">
                 <div class="kode-card-bg">K</div>
-                <h3>K &mdash; Knowledge</h3>
+                <h3>K. Knowledge</h3>
                 <p>Deep domain research across data engineering, cloud architecture, AI systems, and financial intelligence. Every build starts with understanding the problem space completely.</p>
             </div>
             <div class="kode-card">
                 <div class="kode-card-bg">O</div>
-                <h3>O &mdash; Optimization</h3>
+                <h3>O. Optimization</h3>
                 <p>High-performance logic with minimal overhead. From token-efficient LLM pipelines to sub-second financial modelling engines where speed and precision are non-negotiable.</p>
             </div>
             <div class="kode-card">
                 <div class="kode-card-bg">D</div>
-                <h3>D &mdash; Data</h3>
+                <h3>D. Data</h3>
                 <p>Scalable, auditable data architecture. Medallion frameworks, Data Vault 2.0 models, and cloud-native pipelines built to handle enterprise-grade complexity.</p>
             </div>
             <div class="kode-card">
                 <div class="kode-card-bg">E</div>
-                <h3>E &mdash; Engineering</h3>
+                <h3>E. Engineering</h3>
                 <p>Robust execution from design to deployment. CI/CD pipelines, multi-environment provisioning, and production-grade delivery, engineered to last.</p>
             </div>
         </div>
@@ -303,7 +819,7 @@
     <div class="about-layout">
         <div class="about-body">
             <p>I'm a <strong>Senior Data Engineer and Cloud Architect</strong> with 15+ years of experience building enterprise-grade data platforms for Fortune 500 clients across retail, healthcare, oil &amp; gas, finance, and supply chain.</p>
-            <p>I specialise in <strong>Microsoft Fabric Medallion architectures</strong>, Data Vault 2.0 modelling, cloud-native ETL pipelines, and AI-augmented data workflows — delivering scalable, auditable platforms at enterprise scale.</p>
+            <p>I specialise in <strong>Microsoft Fabric Medallion architectures</strong>, Data Vault 2.0 modelling, cloud-native ETL pipelines, and AI-augmented data workflows ,  delivering scalable, auditable platforms at enterprise scale.</p>
             <p>Under the <strong>AEVOLAN</strong> banner, I independently design and ship technology products at the intersection of AI, FinTech, and EdTech. Each product follows the same engineering rigour as enterprise work: performance-first, data-driven, and built to solve a real problem.</p>
             <p>Microsoft Certified in <strong>Fabric Analytics Engineering (DP-600)</strong>, <strong>Fabric Data Engineering (DP-700)</strong>, and <strong>Azure Data Engineering (DP-203)</strong>. Also certified in SC-401 and Anthropic CCA-F AI Fluency.</p>
             <p>For a full career timeline, enterprise experience, and certifications visit <a href="https://ksaisharatkumar.github.io" target="_blank" style="color:var(--accent);text-decoration:none;font-weight:600;">ksaisharatkumar.github.io &#8599;</a></p>
@@ -372,13 +888,311 @@
             <div class="proj-card-body">
                 <span class="proj-tag">AI · SAAS</span>
                 <h3>Soamed AI</h3>
-                <p>A multi-provider AI orchestration platform unifying Claude (Anthropic), GPT-4o (OpenAI), Gemini (Google), Perplexity, and Microsoft Copilot under a single interface. Built on a Python/FastAPI proxy backend that normalizes API contracts across five LLM providers — enabling seamless provider switching, slash-command document automation for .docx and .xlsx generation, and token-efficient agentic workflows.</p>
+                <p>Multi-provider AI orchestration platform unifying Claude, GPT-4o, Gemini, Perplexity, and Microsoft Copilot. Python and FastAPI backend normalizing five LLM APIs with slash-command document automation pipeline generating .docx and .xlsx artifacts.</p>
                 <div class="proj-meta">
                     <span>Python</span><span>FastAPI</span><span>Claude API</span><span>GPT-4o</span><span>Gemini</span><span>Multi-LLM</span>
                 </div>
             </div>
+
+            <!-- Learn More Dropdown -->
+            <div class="learn-drop" id="learn-drop">
+              <div class="learn-inner">
+                <div class="demo-header">
+                  <div class="demo-live"><div class="demo-dot"></div>INTERFACE PREVIEW</div>
+                  <div class="s-tabs">
+                    <button class="s-tab active" onclick="showSoamedScreen(0,this)">Main</button>
+                    <button class="s-tab" onclick="showSoamedScreen(1,this)">5 LLMs</button>
+                    <button class="s-tab" onclick="showSoamedScreen(2,this)">Tokens</button>
+                  </div>
+                </div>
+                <div class="screen-wrap" id="soamed-sc-0"><div class="screen-block">
+  <div class="screen-label">
+    <div class="screen-num">1</div>
+    <div>
+      <div class="screen-title">Main Interface: New Chat</div>
+      <div class="screen-sub">Three-column layout · project selected · ready to prompt</div>
+    </div>
+  </div>
+  <div class="chrome">
+    <div class="chrome-bar">
+      <div class="chrome-dot" style="background:#FF5F57"></div>
+      <div class="chrome-dot" style="background:#FEBC2E"></div>
+      <div class="chrome-dot" style="background:#28C840"></div>
+      <div class="chrome-url">localhost:3000</div>
+    </div>
+    <div class="app-shell">
+      <!-- Projects -->
+      <div class="sidebar-projects">
+        <div class="sidebar-logo">Soamed <span>AI</span></div>
+        <div class="sidebar-section">Projects</div>
+        <div class="proj-item active"><div class="proj-dot" style="background:#E8FF47"></div>Enterprise DWH</div>
+        <div class="proj-item"><div class="proj-dot" style="background:#4DAAFF"></div>Lineage Analysis</div>
+        <div class="proj-item"><div class="proj-dot" style="background:#FF7043"></div>Client SOWs</div>
+        <div class="proj-item"><div class="proj-dot" style="background:#A8FF78"></div>Data Vault POC</div>
+        <div class="new-btn">+ New Project</div>
+      </div>
+      <!-- Chats -->
+      <div class="sidebar-chats">
+        <div class="chat-header">
+          <div class="chat-header-dot"></div>
+          <div class="chat-header-name">Enterprise DWH</div>
+        </div>
+        <div class="new-chat-btn">+ New Chat</div>
+        <div class="chat-item active">
+          <div class="chat-item-icon">💬</div>
+          <div><div class="chat-item-title">New Chat</div><div class="chat-item-meta">0 msgs · just now</div></div>
+        </div>
+        <div class="chat-item">
+          <div class="chat-item-icon">💬</div>
+          <div><div class="chat-item-title">Sales fact table mapping</div><div class="chat-item-meta">14 msgs · 2h ago</div></div>
+        </div>
+        <div class="chat-item">
+          <div class="chat-item-icon">💬</div>
+          <div><div class="chat-item-title">dim_customer lineage</div><div class="chat-item-meta">8 msgs · yesterday</div></div>
+        </div>
+      </div>
+      <!-- Main -->
+      <div class="chat-main">
+        <div class="topbar">
+          <div class="topbar-dot"></div>
+          <div class="topbar-proj">Enterprise DWH</div>
+          <div class="topbar-sep">›</div>
+          <div class="topbar-chat">New Chat</div>
+          <div class="topbar-actions">
+            <div class="topbar-btn">📊 Tokens</div>
+            <div class="topbar-btn">⚙ Settings</div>
+          </div>
+        </div>
+        <div class="empty-state">
+          <div class="empty-logo">✦ Soamed AI</div>
+          <div class="empty-prompt">Your enterprise data engineering workspace. Attach a .sql or .ddl file, then run a command or ask anything.</div>
+          <div class="cmd-chips">
+            <span class="cmd-chip">/lineage</span>
+            <span class="cmd-chip">/mapping-dwh</span>
+            <span class="cmd-chip">/mapping-vault</span>
+            <span class="cmd-chip">/sow</span>
+            <span class="cmd-chip">/arch-doc</span>
+          </div>
+        </div>
+        <div class="input-area">
+          <div class="input-box">
+            <textarea class="input-field" rows="1" placeholder="Type a message or /command…"></textarea>
+            <button class="send-btn">➤</button>
+          </div>
+          <div class="input-footer">
+            <span class="input-hint">Enter to send · Shift+Enter new line</span>
+            <div class="input-right">
+              <span class="ctx-badge">~0 tokens</span>
+              <div class="compress-mini">
+                <span class="cm-btn">Min</span>
+                <span class="cm-btn active">Smart</span>
+                <span class="cm-btn">Full</span>
+              </div>
+              <div class="model-selector-btn">
+                <div class="model-dot-sm" style="background:#A8FF78"></div>
+                Claude Sonnet 4
+                <span style="opacity:0.4;font-size:0.6rem;">▾</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div></div>
+                <div class="screen-wrap" id="soamed-sc-1" style="display:none"><div class="screen-block">
+  <div class="screen-label">
+    <div class="screen-num">2</div>
+    <div>
+      <div class="screen-title">Model Selector: All 5 Providers</div>
+      <div class="screen-sub">Click the model button to switch provider mid-chat</div>
+    </div>
+  </div>
+  <div class="chrome">
+    <div class="chrome-bar">
+      <div class="chrome-dot" style="background:#FF5F57"></div>
+      <div class="chrome-dot" style="background:#FEBC2E"></div>
+      <div class="chrome-dot" style="background:#28C840"></div>
+      <div class="chrome-url">localhost:3000</div>
+    </div>
+    <div class="app-shell relative">
+      <div class="sidebar-projects">
+        <div class="sidebar-logo">Soamed <span>AI</span></div>
+        <div class="sidebar-section">Projects</div>
+        <div class="proj-item active"><div class="proj-dot" style="background:#E8FF47"></div>Enterprise DWH</div>
+        <div class="proj-item"><div class="proj-dot" style="background:#4DAAFF"></div>Lineage Analysis</div>
+        <div class="proj-item"><div class="proj-dot" style="background:#FF7043"></div>Client SOWs</div>
+      </div>
+      <div class="sidebar-chats">
+        <div class="chat-header"><div class="chat-header-dot"></div><div class="chat-header-name">Enterprise DWH</div></div>
+        <div class="new-chat-btn">+ New Chat</div>
+        <div class="chat-item active"><div class="chat-item-icon">💬</div><div><div class="chat-item-title">Sales fact mapping</div><div class="chat-item-meta">6 msgs · 10 min ago</div></div></div>
+      </div>
+      <div class="chat-main">
+        <div class="topbar">
+          <div class="topbar-dot"></div>
+          <div class="topbar-proj">Enterprise DWH</div>
+          <div class="topbar-sep">›</div>
+          <div class="topbar-chat">Sales fact mapping</div>
+          <div class="topbar-actions"><div class="topbar-btn">📊 Tokens</div></div>
+        </div>
+        <div class="messages" style="opacity:0.3;">
+          <div class="msg-row user"><div class="avatar user">You</div><div><div class="bubble user">What are the best practices for fact table grain?</div></div></div>
+          <div class="msg-row ai"><div class="avatar ai">✦</div><div><div class="bubble ai">The grain defines one row in your fact table. For sales, the most common grain is <strong>one row per order line item</strong>…</div></div></div>
+        </div>
+        <div class="input-area">
+          <div class="input-box">
+            <textarea class="input-field" rows="1" placeholder="Type a message or /command…"></textarea>
+            <button class="send-btn">➤</button>
+          </div>
+          <div class="input-footer">
+            <span class="input-hint">Enter to send · Shift+Enter new line</span>
+            <div class="input-right">
+              <span class="ctx-badge">~1,240 tokens</span>
+              <div class="compress-mini">
+                <span class="cm-btn">Min</span><span class="cm-btn active">Smart</span><span class="cm-btn">Full</span>
+              </div>
+              <div class="model-selector-btn" style="border-color:rgba(168,255,120,0.3);color:#A8FF78;">
+                <div class="model-dot-sm" style="background:#A8FF78"></div>
+                Claude Sonnet 4 ▾
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- DROPDOWN OVERLAY -->
+      <div class="dropdown-overlay">
+        <div class="model-dropdown">
+          <div class="model-group-label">Anthropic · Claude</div>
+          <div class="model-option"><div class="model-option-dot" style="background:#4DAAFF"></div><div><div class="model-option-name">Claude Haiku 4.5</div><div class="model-option-desc">Fastest · $0.80/M in</div></div></div>
+          <div class="model-option active"><div class="model-option-dot" style="background:#A8FF78"></div><div><div class="model-option-name">Claude Sonnet 4 ✓</div><div class="model-option-desc">Balanced · $3/M in</div></div></div>
+          <div class="model-option"><div class="model-option-dot" style="background:#E8FF47"></div><div><div class="model-option-name">Claude Opus 4.5</div><div class="model-option-desc">Max quality · $15/M in</div></div></div>
+          <div class="model-group-label">OpenAI · ChatGPT</div>
+          <div class="model-option"><div class="model-option-dot" style="background:#10A37F"></div><div><div class="model-option-name">GPT-4o mini</div><div class="model-option-desc">Cheapest · $0.15/M in</div></div></div>
+          <div class="model-option"><div class="model-option-dot" style="background:#10A37F"></div><div><div class="model-option-name">GPT-4o</div><div class="model-option-desc">Capable · $5/M in</div></div></div>
+          <div class="model-group-label">Google · Gemini</div>
+          <div class="model-option"><div class="model-option-dot" style="background:#4285F4"></div><div><div class="model-option-name">Gemini 2.0 Flash</div><div class="model-option-desc">Fast · $0.10/M in</div></div></div>
+          <div class="model-option"><div class="model-option-dot" style="background:#34A853"></div><div><div class="model-option-name">Gemini 2.5 Pro</div><div class="model-option-desc">Best quality · $1.25/M</div></div></div>
+          <div class="model-group-label">Perplexity · Sonar</div>
+          <div class="model-option"><div class="model-option-dot" style="background:#FF6B35"></div><div><div class="model-option-name">Sonar Pro</div><div class="model-option-desc">Deep search · $3/M in</div></div></div>
+          <div class="model-group-label">GitHub Copilot / Azure</div>
+          <div class="model-option"><div class="model-option-dot" style="background:#6E40C9"></div><div><div class="model-option-name">Copilot (GPT-4o)</div><div class="model-option-desc">Via GitHub · ~$0/seat</div></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div></div>
+                <div class="screen-wrap" id="soamed-sc-2" style="display:none"><div class="screen-block">
+  <div class="screen-label">
+    <div class="screen-num">7</div>
+    <div>
+      <div class="screen-title">Token Usage Dashboard</div>
+      <div class="screen-sub">Live usage · project breakdown · compression mode switcher</div>
+    </div>
+  </div>
+  <div class="chrome">
+    <div class="chrome-bar">
+      <div class="chrome-dot" style="background:#FF5F57"></div>
+      <div class="chrome-dot" style="background:#FEBC2E"></div>
+      <div class="chrome-dot" style="background:#28C840"></div>
+      <div class="chrome-url">localhost:3000</div>
+    </div>
+    <div class="app-shell relative">
+      <div class="sidebar-projects" style="opacity:0.3;">
+        <div class="sidebar-logo">Soamed <span>AI</span></div>
+        <div class="sidebar-section">Projects</div>
+        <div class="proj-item active"><div class="proj-dot" style="background:#E8FF47"></div>Enterprise DWH</div>
+        <div class="proj-item"><div class="proj-dot" style="background:#4DAAFF"></div>Lineage Analysis</div>
+      </div>
+      <div class="sidebar-chats" style="opacity:0.3;">
+        <div class="chat-header"><div class="chat-header-dot"></div><div class="chat-header-name">Enterprise DWH</div></div>
+      </div>
+      <div class="chat-main" style="opacity:0.2;"></div>
+      <!-- DASHBOARD OVERLAY -->
+      <div class="dashboard-overlay">
+        <div class="dashboard-modal">
+          <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:4px;">
+            <div>
+              <div class="dash-title">📊 Token Usage Dashboard</div>
+              <div class="dash-sub">Live · updates every session</div>
+            </div>
+            <span style="color:#3A5068;cursor:pointer;font-size:1rem;">✕</span>
+          </div>
+          <div class="kpi-grid">
+            <div class="kpi-card"><div class="kpi-label">All Time</div><div class="kpi-value blue">2.4M</div></div>
+            <div class="kpi-card"><div class="kpi-label">This Session</div><div class="kpi-value green">86.3K</div></div>
+            <div class="kpi-card"><div class="kpi-label">Top Project</div><div class="kpi-value gold" style="font-size:0.85rem;margin-top:4px;">Enterprise DWH</div></div>
+          </div>
+          <div class="dash-section">Tokens by Project</div>
+          <div class="proj-bar-row">
+            <div class="proj-bar-header"><span>Enterprise DWH</span><span style="color:#607080;">1.4M</span></div>
+            <div class="proj-bar-track"><div class="proj-bar-fill" style="width:100%;background:#1d4ed8;height:8px;border-radius:3px;"></div></div>
+          </div>
+          <div class="proj-bar-row">
+            <div class="proj-bar-header"><span>Lineage Analysis</span><span style="color:#607080;">620K</span></div>
+            <div class="proj-bar-track"><div class="proj-bar-fill" style="width:44%;background:#7c3aed;height:8px;border-radius:3px;"></div></div>
+          </div>
+          <div class="proj-bar-row">
+            <div class="proj-bar-header"><span>Client SOWs</span><span style="color:#607080;">380K</span></div>
+            <div class="proj-bar-track"><div class="proj-bar-fill" style="width:27%;background:#0f6e56;height:8px;border-radius:3px;"></div></div>
+          </div>
+          <div class="savings-bars" style="margin-top:16px;">
+            <div class="dash-section" style="margin-bottom:8px;">Estimated Savings vs Naive Chat</div>
+            <div class="sbar-row">
+              <div class="sbar-label">Soamed AI</div>
+              <div class="sbar-track"><div class="sbar-fill" style="width:40%;background:linear-gradient(90deg,#A8FF78,#4DAAFF);">2.4M</div></div>
+              <div class="sbar-val" style="color:#A8FF78;">2.4M</div>
+            </div>
+            <div class="sbar-row">
+              <div class="sbar-label">Naive (est.)</div>
+              <div class="sbar-track"><div class="sbar-fill" style="width:100%;background:linear-gradient(90deg,#FF6B6B,#FF8C69);">8.4M</div></div>
+              <div class="sbar-val" style="color:#FF8C69;">8.4M</div>
+            </div>
+            <div style="font-size:0.72rem;color:#4A8A5A;font-weight:700;margin-top:6px;">~72% more efficient · saved ~6M tokens (est.)</div>
+            <div style="font-size:0.62rem;color:#3A5068;margin-top:2px;">Baseline estimated at 3.5× actual. Savings vary by workflow.</div>
+          </div>
+          <div class="dash-section" style="margin-top:16px;">Compression Mode</div>
+          <div class="compress-toggle-row">
+            <button class="ct-btn">Minimal ,  Max savings · last turn only</button>
+            <button class="ct-btn active">Smart ✓ ,  Balanced · recommended</button>
+            <button class="ct-btn">Full ,  No compression</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div></div>
+                <div class="slash-section">
+                  <div class="slash-label">// SLASH COMMANDS</div>
+                  <div class="slash-grid">
+                    <div class="slash-item">
+                      <div class="slash-cmd">/lineage</div>
+                      <div class="slash-desc">Full data lineage workbook from your SQL file. Column-level tracing across all layers.</div>
+                      <div class="slash-out">&#8594; <span>lineage.xlsx</span></div>
+                    </div>
+                    <div class="slash-item">
+                      <div class="slash-cmd">/mapping-dwh</div>
+                      <div class="slash-desc">Star schema source-to-target mapping for your data warehouse design.</div>
+                      <div class="slash-out">&#8594; <span>mapping_dwh.xlsx</span></div>
+                    </div>
+                    <div class="slash-item">
+                      <div class="slash-cmd">/mapping-vault</div>
+                      <div class="slash-desc">Data Vault 2.0 mapping: Hubs, Links, Satellites with source field alignment.</div>
+                      <div class="slash-out">&#8594; <span>mapping_vault.xlsx</span></div>
+                    </div>
+                    <div class="slash-item">
+                      <div class="slash-cmd">/mapping-modern</div>
+                      <div class="slash-desc">Modern data stack mapping. Medallion architecture, Bronze to Gold layer.</div>
+                      <div class="slash-out">&#8594; <span>mapping_modern.xlsx</span></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
             <div class="proj-actions">
                 <button class="btn-secondary" onclick="requestDemo('Soamed AI')">&#128203; Request Demo</button>
+                <button class="btn-learn" id="learn-btn" onclick="toggleLearnMore()">Learn More <span class="lm-plus">+</span></button>
             </div>
         </div>
 
@@ -403,7 +1217,7 @@
             <div class="proj-card-body">
                 <span class="proj-tag">EDTECH · CERTIFICATION PREP</span>
                 <h3>PassForge</h3>
-                <p>An AI-powered certification practice platform covering 30 exams across 8 vendors for Microsoft, AWS, Snowflake, Oracle, Google Cloud, Databricks, Salesforce, and Anthropic. 650+ topics, 50+ questions per topic, and 5 question types. No API calls during sessions — fast, offline-ready exam simulation built for serious professionals.</p>
+                <p>An AI-powered certification practice platform covering 30 exams across 8 vendors for Microsoft, AWS, Snowflake, Oracle, Google Cloud, Databricks, Salesforce, and Anthropic. 650+ topics, 50+ questions per topic, and 5 question types. No API calls during sessions ,  fast, offline-ready exam simulation built for serious professionals.</p>
                 <div class="proj-meta">
                     <span>30 Exams</span><span>8 Vendors</span><span>650+ Topics</span><span>AI-Generated</span><span>Zero Login</span>
                 </div>
@@ -419,7 +1233,7 @@
             <div class="proj-card-body">
                 <span class="proj-tag">EDTECH · AI LITERACY</span>
                 <h3>ZeroToAI</h3>
-                <p>A free interactive AI crash course covering 23 core AI concepts — LLMs, RAG, embeddings, vector search, MCP, agents, prompt engineering, and more. Real-world use cases tied to enterprise and data engineering workflows, a visual concept flow diagram, a 4-week study roadmap, and a certification guide. Fully free, no login required, open to everyone.</p>
+                <p>A free interactive AI crash course covering 23 core AI concepts including LLMs, RAG, embeddings, vector search, MCP, agents, prompt engineering, and more. Real-world use cases tied to enterprise and data engineering workflows, a visual concept flow diagram, a 4-week study roadmap, and a certification guide. Fully free, no login required, open to everyone.</p>
                 <div class="proj-meta">
                     <span>23 Concepts</span><span>Flow Diagrams</span><span>4-Week Roadmap</span><span>Free & Public</span><span>Netlify</span>
                 </div>
@@ -452,10 +1266,10 @@
             <label>REGARDING</label>
             <select id="f-project">
                 <option value="">Select a project or topic...</option>
-                <option value="Soamed AI">Soamed AI — Multi-LLM Platform</option>
-                <option value="HiFi Finances">HiFi Finances — FinTech Platform</option>
-                <option value="PassForge">PassForge — Certification Prep</option>
-                <option value="ZeroToAI">ZeroToAI — AI Literacy Course</option>
+                <option value="Soamed AI">Soamed AI | Multi-LLM Platform</option>
+                <option value="HiFi Finances">HiFi Finances | FinTech Platform</option>
+                <option value="PassForge">PassForge | Certification Prep</option>
+                <option value="ZeroToAI">ZeroToAI | AI Literacy Course</option>
                 <option value="Consulting">Data Engineering / Cloud Architecture Consulting</option>
                 <option value="Other">Other / General Enquiry</option>
             </select>
@@ -581,6 +1395,29 @@
             btn.disabled = false;
         });
     }
+
+function showSoamedScreen(idx, btn) {
+    [0,1,2].forEach(function(i) {
+        var el = document.getElementById('soamed-sc-'+i);
+        if(el) el.style.display = i===idx ? 'block' : 'none';
+    });
+    document.querySelectorAll('.s-tab').forEach(function(b){b.classList.remove('active');});
+    btn.classList.add('active');
+}
+
+function toggleLearnMore() {
+    var drop = document.getElementById('learn-drop');
+    var btn = document.getElementById('learn-btn');
+    var isOpen = drop.classList.contains('open');
+    drop.classList.toggle('open');
+    btn.classList.toggle('open');
+    if (!isOpen) {
+        setTimeout(function() {
+            var card = document.getElementById('soamed-card');
+            if (card) card.scrollIntoView({behavior:'smooth', block:'start'});
+        }, 100);
+    }
+}
 </script>
 </body>
 </html>
