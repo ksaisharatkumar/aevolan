@@ -6,8 +6,8 @@
     <title>AEVOLAN | Sai Sharat Khambampati | Senior Data Engineer & Cloud Architect</title>
 
     <!-- SEO Meta Tags -->
-    <meta name="description" content="AEVOLAN by Sai Sharat Khambampati. Senior Data Engineer, Cloud Architect, 15+ years. Creator of Soamed AI, HiFi Finances, PassForge and ZeroToAI. KODE methodology."/>
-    <meta name="keywords" content="Sai Sharat Khambampati, AEVOLAN, Senior Data Engineer, Cloud Architect, Microsoft Fabric, Azure, Snowflake, Data Vault 2.0, Soamed AI, HiFi Finances, PassForge, ZeroToAI, FinTech, EdTech, AI platform"/>
+    <meta name="description" content="AEVOLAN by Sai Sharat Khambampati. Senior Data Engineer, Cloud Architect, 15+ years. Creator of Soamed AI, HiFi Finances, PassForge, ZeroToAI and SCADE. KODE methodology."/>
+    <meta name="keywords" content="Sai Sharat Khambampati, AEVOLAN, Senior Data Engineer, Cloud Architect, Microsoft Fabric, Azure, Snowflake, Data Vault 2.0, Soamed AI, HiFi Finances, PassForge, ZeroToAI, SCADE, FinTech, EdTech, Supply Chain, AI platform"/>
     <meta name="author" content="Sai Sharat Khambampati"/>
     <meta name="robots" content="index, follow"/>
     <!-- Bing / Edge -->
@@ -17,7 +17,7 @@
 
     <!-- Open Graph (LinkedIn, WhatsApp, Facebook previews) -->
     <meta property="og:title" content="AEVOLAN | Sai Sharat Khambampati | Senior Data Engineer & Cloud Architect"/>
-    <meta property="og:description" content="AEVOLAN by Sai Sharat Khambampati. Personal home for Soamed AI, HiFi Finances, PassForge and ZeroToAI. 15+ years of enterprise data engineering and cloud architecture."/>
+    <meta property="og:description" content="AEVOLAN by Sai Sharat Khambampati. Personal home for Soamed AI, HiFi Finances, PassForge, ZeroToAI and SCADE. 15+ years of enterprise data engineering and cloud architecture."/>
     <meta property="og:url" content="https://www.aevolantech.com/"/>
     <meta property="og:type" content="website"/>
     <meta property="og:site_name" content="AEVOLAN"/>
@@ -25,7 +25,7 @@
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary"/>
     <meta name="twitter:title" content="AEVOLAN | Sai Sharat Khambampati"/>
-    <meta name="twitter:description" content="Senior Data Engineer and Cloud Architect. Creator of Soamed AI, HiFi Finances, PassForge, ZeroToAI."/>
+    <meta name="twitter:description" content="Senior Data Engineer and Cloud Architect. Creator of Soamed AI, HiFi Finances, PassForge, ZeroToAI, SCADE."/>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;900&display=swap');
         :root { --bg: #050505; --accent: #00f2ff; --accent2: #7b61ff; --glass: rgba(255,255,255,0.04); }
@@ -103,8 +103,8 @@
         .form-group input:focus, .form-group textarea:focus, .form-group select:focus { border-color: var(--accent); }
         .form-group select option { background: #0d0d0d; }
         .form-group textarea { height: 140px; resize: vertical; }
-        .send-btn { padding: 12px 32px; background: var(--accent); color: #000; border: none; border-radius: 50px; font-size: 0.85rem; font-weight: 700; cursor: pointer; transition: 0.2s; font-family: 'Inter', sans-serif; letter-spacing: 0.5px; }
-        .send-btn:hover { background: #00d4e0; transform: translateY(-1px); }
+        .contact-send-btn { padding: 12px 32px; background: var(--accent); color: #000; border: none; border-radius: 50px; font-size: 0.85rem; font-weight: 700; cursor: pointer; transition: 0.2s; font-family: 'Inter', sans-serif; letter-spacing: 0.5px; }
+        .contact-send-btn:hover { background: #00d4e0; transform: translateY(-1px); }
 
         @keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
 
@@ -1244,6 +1244,22 @@ body {
             </div>
         </div>
 
+        <!-- SCADE -->
+        <div class="proj-card">
+            <div class="proj-card-body">
+                <span class="proj-tag">ENTERPRISE · SUPPLY CHAIN</span>
+                <h3>SCADE</h3>
+                <p>An enterprise supply chain anomaly detection engine that monitors Tier 1 to 3 supplier networks in real time, automatically detecting disruptions such as EDI silence, shipment delays, risk score spikes, and stockout risks. When an anomaly is flagged, SCADE's blast radius engine computes full financial exposure across the supplier graph and deploys an AI-powered War Room that generates Pareto-ranked mitigations in under 2 minutes. Built on FastAPI and React with Claude as the reasoning engine, SCADE turns reactive crisis management into proactive supply chain intelligence.</p>
+                <div class="proj-meta">
+                    <span>FastAPI</span><span>React</span><span>Claude API</span><span>Supply Chain</span><span>AI Agents</span><span>Real-time</span>
+                </div>
+            </div>
+            <div class="proj-actions">
+                <a href="https://scade.aevolantech.com" target="_blank" class="btn-primary">View Live &rarr;</a>
+                <button class="btn-secondary" onclick="requestDemo('SCADE')">&#128203; Request Demo</button>
+            </div>
+        </div>
+
     </div>
 </section>
 
@@ -1270,6 +1286,7 @@ body {
                 <option value="HiFi Finances">HiFi Finances | FinTech Platform</option>
                 <option value="PassForge">PassForge | Certification Prep</option>
                 <option value="ZeroToAI">ZeroToAI | AI Literacy Course</option>
+                <option value="SCADE">SCADE | Supply Chain Anomaly Detection</option>
                 <option value="Consulting">Data Engineering / Cloud Architecture Consulting</option>
                 <option value="Other">Other / General Enquiry</option>
             </select>
@@ -1278,7 +1295,7 @@ body {
             <label>MESSAGE</label>
             <textarea id="f-message" placeholder="Tell me about the problem you're looking to solve, or what you'd like to see in a demo..."></textarea>
         </div>
-        <button class="send-btn" onclick="sendForm()">Send Message &rarr;</button>
+        <button class="contact-send-btn" onclick="sendForm()">Send Message &rarr;</button>
         <div id="form-msg" style="margin-top:16px;font-size:0.85rem;color:var(--accent);display:none;"></div>
     </div>
 </section>
@@ -1345,7 +1362,7 @@ body {
         var project = document.getElementById('f-project').value;
         var message = document.getElementById('f-message').value.trim();
         var msg = document.getElementById('form-msg');
-        var btn = document.querySelector('.send-btn');
+        var btn = document.querySelector('.contact-send-btn');
 
         if (!name || !email || !message) {
             msg.style.color = '#ff6b6b';
