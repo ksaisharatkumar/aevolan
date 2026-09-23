@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 120'%3E%3Crect width='120' height='120' rx='24' fill='%23F5F1FF'/%3E%3Cpath d='M60 72 C60 72 42 46 30 54 C18 62 26 78 36 78 C46 78 54 66 60 60 C66 54 74 42 84 42 C94 42 102 58 90 66 C78 74 60 48 60 48' stroke='%235B3DF5' stroke-width='7' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cline x1='60' y1='24' x2='60' y2='52' stroke='%235B3DF5' stroke-width='7' stroke-linecap='round'/%3E%3Ccircle cx='60' cy='22' r='8' fill='%23FF4D6D'/%3E%3C/svg%3E">
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<title>AEVOLAN — Data in Motion (Elevated)</title>
+<title>AEVOLAN | Sai Sharat Khambampati | Senior Data Engineer & Cloud Architect</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;600;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
@@ -175,10 +176,10 @@
     <div class="mark">AEV<span>O</span>LAN</div>
   </div>
   <ul>
-    <li><a href="#" class="on" onclick="showTab('home',this);return false;">Home</a></li>
-    <li><a href="#" onclick="showTab('about',this);return false;">About</a></li>
-    <li><a href="#" onclick="showTab('projects',this);return false;">Projects</a></li>
-    <li><a href="#" onclick="showTab('contact',this);return false;">Contact</a></li>
+    <li><a href="#" data-tab="home" class="on" onclick="showTab('home',this);return false;">Home</a></li>
+    <li><a href="#" data-tab="about" onclick="showTab('about',this);return false;">About</a></li>
+    <li><a href="#" data-tab="projects" onclick="showTab('projects',this);return false;">Projects</a></li>
+    <li><a href="#" data-tab="contact" onclick="showTab('contact',this);return false;">Contact</a></li>
   </ul>
 </nav>
 
@@ -200,7 +201,7 @@
     <h1 class="hero-word">AEV<span class="hl">O</span>LAN</h1>
     <p class="hero-tag">Engineering the long distance</p>
     <p class="hero-sub-line">Built on the <span class="hl">KODE</span> methodology.</p>
-    <div class="cta-row"><button class="btn pri">View Projects</button><button class="btn sec">Say Hello</button></div>
+    <div class="cta-row"><button class="btn pri" onclick="showTab('projects', document.querySelector('[data-tab=projects]'))">View Projects</button><button class="btn sec" onclick="showTab('contact', document.querySelector('[data-tab=contact]'))">Say Hello</button></div>
     <div class="metric-row">
       <div class="metric"><b>5</b><span>Products Shipped</span></div>
       <div class="metric"><b>5</b><span>LLMs Unified</span></div>
@@ -331,7 +332,7 @@
       <div class="about-tags"><span>FastAPI</span><span>React</span><span>Claude API</span><span>Supply Chain</span><span>AI Agents</span><span>Real-time</span></div>
       <div class="pdetail-actions">
         <a class="btn pri btn-sm" href="https://scade.aevolantech.com" target="_blank">View Live &rarr;</a>
-        <button class="btn sec btn-sm">Request Demo</button>
+        <button class="btn sec btn-sm" onclick="requestDemo('SCADE')">Request Demo</button>
       </div>
     </div>
 
@@ -342,7 +343,7 @@
       <p>Multi-provider AI orchestration platform unifying Claude, GPT-4o, Gemini, Perplexity, and Microsoft Copilot. Python and FastAPI backend normalizing five LLM APIs with a slash-command document automation pipeline generating .docx and .xlsx artifacts.</p>
       <div class="about-tags"><span>Python</span><span>FastAPI</span><span>Claude API</span><span>GPT-4o</span><span>Gemini</span><span>Multi-LLM</span></div>
       <div class="pdetail-actions">
-        <button class="btn pri btn-sm">Request Demo</button>
+        <button class="btn pri btn-sm" onclick="requestDemo('Soamed AI')">Request Demo</button>
       </div>
     </div>
 
@@ -354,7 +355,7 @@
       <div class="about-tags"><span>Python</span><span>Financial Modelling</span><span>Claude API</span></div>
       <div class="pdetail-actions">
         <a class="btn pri btn-sm" href="https://hiii-fi.netlify.app/" target="_blank">View Live &rarr;</a>
-        <button class="btn sec btn-sm">Request Demo</button>
+        <button class="btn sec btn-sm" onclick="requestDemo('HiFi Finances')">Request Demo</button>
       </div>
     </div>
 
@@ -366,7 +367,7 @@
       <div class="about-tags"><span>Claude API</span><span>Python</span><span>30 Exams</span><span>8 Vendors</span></div>
       <div class="pdetail-actions">
         <a class="btn pri btn-sm" href="https://pass-forge-lilac.vercel.app/" target="_blank">View Live &rarr;</a>
-        <button class="btn sec btn-sm">Request Demo</button>
+        <button class="btn sec btn-sm" onclick="requestDemo('PassForge')">Request Demo</button>
       </div>
     </div>
 
@@ -378,7 +379,7 @@
       <div class="about-tags"><span>HTML / CSS / JS</span><span>Claude Platform</span><span>Netlify</span><span>AI Literacy</span></div>
       <div class="pdetail-actions">
         <a class="btn pri btn-sm" href="https://zero-to-ai.netlify.app/" target="_blank">View Live &rarr;</a>
-        <button class="btn sec btn-sm">Request Demo</button>
+        <button class="btn sec btn-sm" onclick="requestDemo('ZeroToAI')">Request Demo</button>
       </div>
     </div>
 
@@ -433,14 +434,15 @@
 <section class="contact-sec">
   <div class="sec-head"><h2>Say Hello</h2><p>Tell me what you&rsquo;re building or trying to solve.</p></div>
   <div class="contact-card">
-    <input class="c-input" type="text" placeholder="Your name"/>
-    <input class="c-input" type="email" placeholder="your@email.com"/>
-    <select class="c-input">
-      <option>Regarding: select a project</option>
-      <option>Soamed AI</option><option>HiFi Finances</option><option>PassForge</option><option>ZeroToAI</option><option>SCADE</option><option>Something else</option>
+    <input class="c-input" id="f-name" type="text" placeholder="Your name"/>
+    <input class="c-input" id="f-email" type="email" placeholder="your@email.com"/>
+    <select class="c-input" id="f-project">
+      <option value="">Regarding: select a project</option>
+      <option value="Soamed AI">Soamed AI</option><option value="HiFi Finances">HiFi Finances</option><option value="PassForge">PassForge</option><option value="ZeroToAI">ZeroToAI</option><option value="SCADE">SCADE</option><option value="Something else">Something else</option>
     </select>
-    <textarea class="c-input" rows="4" placeholder="Tell me about the problem you're looking to solve..."></textarea>
-    <button class="btn pri" style="width:100%;">Send Message</button>
+    <textarea class="c-input" id="f-message" rows="4" placeholder="Tell me about the problem you're looking to solve..."></textarea>
+    <button class="btn pri contact-send-btn" style="width:100%;" onclick="sendForm()">Send Message</button>
+    <div id="form-msg" style="font-size:13px;text-align:center;display:none;"></div>
   </div>
 </section>
 </div>
@@ -458,6 +460,68 @@ function showTab(id, link){
   document.querySelectorAll('nav a').forEach(function(a){ a.classList.remove('on'); });
   link.classList.add('on');
   window.scrollTo({top:0, behavior:'instant'});
+}
+
+function requestDemo(project) {
+  showTab('contact', document.querySelector('[data-tab=contact]'));
+  setTimeout(function() {
+    var sel = document.getElementById('f-project');
+    for (var i = 0; i < sel.options.length; i++) {
+      if (sel.options[i].value === project) { sel.selectedIndex = i; break; }
+    }
+    document.getElementById('f-message').focus();
+  }, 100);
+}
+
+function sendForm() {
+  var name = document.getElementById('f-name').value.trim();
+  var email = document.getElementById('f-email').value.trim();
+  var project = document.getElementById('f-project').value;
+  var message = document.getElementById('f-message').value.trim();
+  var msg = document.getElementById('form-msg');
+  var btn = document.querySelector('.contact-send-btn');
+
+  if (!name || !email || !message) {
+    msg.style.color = '#FF4D6D';
+    msg.textContent = 'Please fill in your name, email, and message.';
+    msg.style.display = 'block';
+    return;
+  }
+
+  btn.textContent = 'Sending...';
+  btn.disabled = true;
+  msg.style.display = 'none';
+
+  fetch('/api/send', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ name: name, email: email, project: project, message: message })
+  })
+  .then(function(res) {
+    if (res.ok) {
+      msg.style.color = '#5B3DF5';
+      msg.textContent = 'Message sent! I will get back to you within 24 hours.';
+      msg.style.display = 'block';
+      document.getElementById('f-name').value = '';
+      document.getElementById('f-email').value = '';
+      document.getElementById('f-project').selectedIndex = 0;
+      document.getElementById('f-message').value = '';
+      btn.textContent = 'Message Sent \u2713';
+    } else {
+      msg.style.color = '#FF4D6D';
+      msg.textContent = 'Something went wrong. Please email aevolantechnologies@gmail.com directly.';
+      msg.style.display = 'block';
+      btn.textContent = 'Send Message';
+      btn.disabled = false;
+    }
+  })
+  .catch(function() {
+    msg.style.color = '#FF4D6D';
+    msg.textContent = 'Could not connect. Please email aevolantechnologies@gmail.com directly.';
+    msg.style.display = 'block';
+    btn.textContent = 'Send Message';
+    btn.disabled = false;
+  });
 }
 </script>
 
