@@ -80,7 +80,7 @@
   .ticker-wrap { background:var(--ink); overflow:hidden; padding:14px 0; margin-top:50px; position:relative; z-index:2; }
   .ticker { display:flex; gap:44px; white-space:nowrap; animation:scroll 22s linear infinite; width:max-content; }
   .ticker span { color:#fff; font-size:13px; font-weight:600; opacity:.85; display:flex; align-items:center; gap:10px; }
-  .ticker span::after{ content:'&#9670;'; color:var(--lime); font-size:8px; }
+  .ticker span::after{ content:'\25C6'; color:var(--lime); font-size:8px; }
   @keyframes scroll { from{transform:translateX(0);} to{transform:translateX(-50%);} }
 
   /* ---------- KODE PIPELINE ---------- */
@@ -157,9 +157,91 @@
   .c-input { padding:14px 16px; border-radius:12px; border:2px solid transparent; font-family:'Inter',sans-serif; font-size:14px; background:#fff; }
   .c-input:focus { outline:none; border-color:var(--violet); }
   textarea.c-input { resize:vertical; }
+    /* ========== SPLASH ========== */
+  #splash {
+    position:fixed; inset:0; z-index:9999;
+    background:var(--paper);
+    display:flex; flex-direction:column;
+    align-items:center; justify-content:center;
+    gap:0; text-align:center;
+  }
+  #splash.splash-exit {
+    animation:splashOut .5s cubic-bezier(.4,0,1,1) forwards;
+  }
+  @keyframes splashOut {
+    to { opacity:0; transform:scale(1.03); }
+  }
+  .splash-eyebrow {
+    font-family:'Inter',sans-serif; font-size:11px; font-weight:700;
+    letter-spacing:5px; color:var(--violet); opacity:.6;
+    text-transform:uppercase; margin-bottom:18px;
+  }
+  .splash-word {
+    font-family:'Bricolage Grotesque',sans-serif;
+    font-weight:800; font-size:clamp(52px,10vw,100px);
+    letter-spacing:-2px; color:var(--ink); line-height:1;
+  }
+  .splash-word .so { color:var(--violet); }
+  .splash-tag {
+    font-size:15px; color:var(--grey); margin:14px 0 40px;
+    letter-spacing:.5px;
+  }
+  .splash-btn {
+    display:inline-flex; align-items:center; gap:10px;
+    padding:16px 40px; background:var(--ink); color:#fff;
+    border:none; border-radius:50px; cursor:pointer;
+    font-family:'Bricolage Grotesque',sans-serif;
+    font-weight:700; font-size:16px;
+    transition:.2s; box-shadow:0 8px 32px rgba(20,18,31,.18);
+  }
+  .splash-btn:hover { background:var(--violet); transform:translateY(-2px); box-shadow:0 12px 40px rgba(91,61,245,.35); }
+  .splash-btn .arr { transition:.2s; }
+  .splash-btn:hover .arr { transform:translateX(4px); }
+  /* dot grid behind splash */
+  #splash::before {
+    content:''; position:absolute; inset:0;
+    background-image:radial-gradient(var(--violet) 1.4px, transparent 1.4px);
+    background-size:28px 28px; opacity:.06; pointer-events:none;
+  }
+  /* lime accent blob */
+  #splash::after {
+    content:''; position:absolute;
+    bottom:-120px; right:-120px;
+    width:340px; height:340px; border-radius:50%;
+    background:var(--lime); opacity:.25; filter:blur(4px);
+    pointer-events:none;
+  }
+
 </style>
 </head>
 <body>
+
+
+
+<!-- SPLASH -->
+<div id="splash">
+  <svg width="88" height="88" viewBox="0 0 120 120" fill="none" style="margin-bottom:22px;">
+    <rect x="4" y="4" width="112" height="112" rx="22"
+          fill="rgba(91,61,245,0.06)" stroke="#5B3DF5" stroke-width="2.5"/>
+    <path d="M60 72 C60 72 42 46 30 54 C18 62 26 78 36 78 C46 78 54 66 60 60
+             C66 54 74 42 84 42 C94 42 102 58 90 66 C78 74 60 48 60 48"
+          stroke="#5B3DF5" stroke-width="4.5" fill="none"
+          stroke-linecap="round" stroke-linejoin="round"/>
+    <line x1="60" y1="24" x2="60" y2="52" stroke="#5B3DF5" stroke-width="4.5" stroke-linecap="round"/>
+    <circle cx="60" cy="22" r="5.5" fill="#FF4D6D"/>
+    <text x="16" y="32" font-family="Inter" font-weight="900" font-size="11" fill="#5B3DF5" opacity="0.5">K</text>
+    <text x="92" y="32" font-family="Inter" font-weight="900" font-size="11" fill="#14121F" opacity="0.3">O</text>
+    <text x="16" y="106" font-family="Inter" font-weight="900" font-size="11" fill="#14121F" opacity="0.3">D</text>
+    <text x="92" y="106" font-family="Inter" font-weight="900" font-size="11" fill="#5B3DF5" opacity="0.5">E</text>
+  </svg>
+  <div class="splash-eyebrow">AEVOLAN</div>
+  <div class="splash-word">AEV<span class="so">O</span>LAN</div>
+  <div class="splash-tag">Engineering the long distance</div>
+  <button class="splash-btn" onclick="exploreSite()">
+    Explore &nbsp;<span class="arr">&#8594;</span>
+  </button>
+</div>
+<!-- END SPLASH -->
 
 <nav>
   <div style="display:flex;align-items:center;gap:12px;">
@@ -453,6 +535,17 @@
 </footer>
 
 <script>
+function exploreSite() {
+  var splash = document.getElementById('splash');
+  if (!splash) return;
+  splash.classList.add('splash-exit');
+  document.body.style.overflow = '';
+  setTimeout(function() { splash.style.display = 'none'; }, 550);
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  document.body.style.overflow = 'hidden';
+});
 function showTab(id, link){
   document.querySelectorAll('.tabpanel').forEach(function(p){
     p.classList.toggle('on', p.id === 'tab-' + id);
@@ -460,7 +553,28 @@ function showTab(id, link){
   document.querySelectorAll('nav a').forEach(function(a){ a.classList.remove('on'); });
   link.classList.add('on');
   window.scrollTo({top:0, behavior:'instant'});
+  try { history.pushState(null, '', id === 'home' ? '/' : '/' + id); } catch(e) {}
 }
+
+// On load: read the URL path and activate the matching tab
+window.addEventListener('load', function() {
+  var path = window.location.pathname.replace('/', '').replace(/\/$/, '');
+  var valid = ['home', 'about', 'projects', 'contact'];
+  if (path && valid.indexOf(path) > -1) {
+    var link = document.querySelector('[data-tab=' + path + ']');
+    if (link) showTab(path, link);
+  }
+});
+
+// Handle browser back/forward buttons
+window.addEventListener('popstate', function() {
+  var path = window.location.pathname.replace('/', '').replace(/\/$/, '') || 'home';
+  var valid = ['home', 'about', 'projects', 'contact'];
+  if (valid.indexOf(path) > -1) {
+    var link = document.querySelector('[data-tab=' + path + ']');
+    if (link) showTab(path, link);
+  }
+});
 
 function requestDemo(project) {
   showTab('contact', document.querySelector('[data-tab=contact]'));
